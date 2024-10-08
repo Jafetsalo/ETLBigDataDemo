@@ -45,6 +45,11 @@ v_database = "bigdata"
 v_user	   = "postgres"
 v_password = "postgres"
 
+
+archivo = "reporteETL.txt"
+sys.stdout = open(archivo, "a")
+
+
 #-----------------------------------------------------------------------------
 # Función: Obtener número de código de Región
 #-----------------------------------------------------------------------------
@@ -143,7 +148,7 @@ def cargarMunicipio(conn, cur, contador, id_pais, codigo_dep, codigo_mun, munici
 #-----------------------------------------------------------------------------
 def cargar_id_region(conn, cur, numero_region, codigo_dep, id_pais):
     try:
-       
+        codigo_dep = f"0{codigo_dep}" if int(codigo_dep) < 10 else str(codigo_dep) #Si codigo_departamento es menor a '10' agregarle un '0' delante para '08', '05'
         codigo_region = int(f"{id_pais}{numero_region}")
         codigo_departamento = int(f"{id_pais}{codigo_dep}")
 

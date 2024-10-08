@@ -27,8 +27,8 @@ v_password = "postgres"
 
 
 #INCIO TRABAJO ESTUDIANTE
-archivo = "reporteEjecucionesTamanio.txt"
-sys.stdout = open(archivo, "a")
+#archivo = "reporteEjecucionesTamanio.txt"
+#sys.stdout = open(archivo, "a")
 # Escribe el resultado en el archivo
 
 #FIN TRABAJO ESTUDIANTE
@@ -100,7 +100,7 @@ try:
     # 1000000
     # Cambie el valor de la variable registros para cada cantidad y ejecute el programa
     # -------------------------------------------------------------------------
-    registros = 10000
+    registros = 10000000
     # -------------------------------------------------------------------------
 
     # -------------------------------------------------------------------------
